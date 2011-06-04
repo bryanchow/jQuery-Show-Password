@@ -81,8 +81,8 @@ $.fn.showPassword = function(options) {
         top: elPosition.top
       },
       type: 'text'
-    }).appendTo($parent);
-    
+    }).insertAfter($this);
+
     //When form is submitted and password is hidden, update the password val
     $this.closest('form').bind('submit', function() {
       if($this.css('display') === 'none') {
