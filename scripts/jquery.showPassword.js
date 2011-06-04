@@ -27,8 +27,8 @@ $.fn.showPassword = function(options) {
   return this.each(function() {
     var $this = $(this),
         elPosition = $this.position(),
-        elWidth = $this.outerWidth(),
-        elHeight = $this.outerHeight(),
+        elWidth = $this.outerWidth(true),
+        elHeight = $this.outerHeight(true),
         $parent = $this.parent(),
         parentHeight = $parent.height();
 
@@ -62,9 +62,9 @@ $.fn.showPassword = function(options) {
     }).appendTo($parent);
     
     var $toggleAnchor = $parent.find('.'+o.linkClass),
-        toggleAnchorWidth = $toggleAnchor.outerWidth(),
+        toggleAnchorWidth = $toggleAnchor.outerWidth(true),
         toggleAnchorLeft = parseInt($toggleAnchor.css('left'), 10),
-        toggleAnchorHeight = $toggleAnchor.outerHeight(),
+        toggleAnchorHeight = $toggleAnchor.outerHeight(true),
         toggleAnchorTop = parseInt($toggleAnchor.css('top'), 10);
         
     $toggleAnchor.css({
